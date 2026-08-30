@@ -91,7 +91,7 @@ retail-customer-analytics-forecasting/
 1. Open `accenture_retail_analytics.ipynb` in Google Colab or Jupyter.
 2. Install the dependencies listed in `requirements.txt`.
 3. Run the notebook from top to bottom.
-4. The notebook loads the UCI dataset, performs the analysis, and exports segmentation and forecast output files for dashboarding.
+4. The notebook loads the official UCI dataset, performs the analysis, and writes segmentation and forecast tables to a generated `results/` directory for downstream reporting.
 
 ## Limitations
 
