@@ -1,6 +1,6 @@
 # Customer Analytics, Segmentation & Revenue Forecasting
 
-End-to-end retail analytics project using the **UCI Online Retail II** transaction dataset. The project combines data cleaning, SQL-based business analysis, customer segmentation, forecasting, and an executive Power BI dashboard.
+End-to-end retail analytics project using the **UCI Online Retail II** transaction dataset. The project combines data cleaning, SQL-based business analysis, customer segmentation, forecasting, and dashboard-ready exports.
 
 ## Business questions
 
@@ -40,8 +40,8 @@ End-to-end retail analytics project using the **UCI Online Retail II** transacti
    - Compared a **seasonal-naive baseline** against **Holt-Winters exponential smoothing**.
    - Evaluated performance using MAE and RMSE.
 
-5. **Power BI executive dashboard**
-   - Built KPI cards, customer-segment visualization, model comparison, and actual-vs-forecast reporting.
+5. **Dashboard-ready exports**
+   - Exported customer-level segments, cluster profiles, actual-vs-forecast results, and model-comparison tables as reusable CSV inputs for downstream reporting.
 
 ## Key verified results
 
@@ -75,7 +75,7 @@ The seasonal-naive baseline achieved **14.7% lower MAE** than Holt-Winters on th
 - **Machine Learning:** scikit-learn, K-Means, StandardScaler, silhouette score
 - **Forecasting:** statsmodels, Holt-Winters exponential smoothing
 - **SQL:** DuckDB
-- **Visualization:** Power BI, Matplotlib
+- **Visualization and outputs:** Matplotlib, dashboard-ready CSV exports
 
 ## Repository structure
 
