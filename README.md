@@ -1,4 +1,4 @@
-# Customer Analytics, Segmentation & Revenue Forecasting
+# Customer Analytics, Segmentation & Positive-Sales Forecasting
 
 End-to-end retail analytics project using the **UCI Online Retail II** transaction dataset. The project combines data cleaning, SQL-based business analysis, customer segmentation, forecasting, and dashboard-ready exports.
 
@@ -13,8 +13,10 @@ End-to-end retail analytics project using the **UCI Online Retail II** transacti
 
 **UCI Online Retail II** — two years of transactional data from a UK-based online retailer.
 
+**Target definition:** The preprocessing excludes invoices flagged as cancellations, nonpositive quantities and nonpositive unit prices. The series and model scores therefore describe **positive transaction sales value after filtering**, not net realized revenue, cash collections, refund-adjusted revenue, accounting recognition or profit. Returns/cancellations have not been netted back into the forecast target. No new forecast was run for this disclosure.
+
 - Raw transactions: **1,067,371**
-- Positive realized-revenue transactions after cleaning: **1,007,913**
+- Positive-sales (returns excluded) transactions after cleaning: **1,007,913**
 - Customer-attributable transactions: **779,425**
 - Unique customers used for RFM analysis: **5,878**
 
@@ -23,7 +25,7 @@ End-to-end retail analytics project using the **UCI Online Retail II** transacti
 1. **Data audit and cleaning**
    - Audited missing values, duplicates, non-positive quantities/prices, and cancellation invoices.
    - Parsed transaction dates and retained an auditable raw copy.
-   - Excluded cancellations and non-positive transactions for realized-revenue analysis.
+   - Excluded cancellations and non-positive transactions for positive-sales analysis (not net revenue).
 
 2. **Business analysis with Python and SQL**
    - Used Pandas for revenue, country, product, and time-based analysis.
@@ -35,7 +37,7 @@ End-to-end retail analytics project using the **UCI Online Retail II** transacti
    - Compared `K = 2...6` using silhouette score.
    - Selected **K = 2**, with silhouette score **0.439**.
 
-4. **Revenue forecasting**
+4. **Positive-sales forecasting**
    - Built a 28-day future holdout.
    - Compared a **seasonal-naive baseline** against **Holt-Winters exponential smoothing**.
    - Evaluated performance using MAE and RMSE.
